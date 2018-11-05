@@ -20,6 +20,7 @@ int main(){
 	strcpy(end,"end");
 	while(1){
 		fd = open(FIFO_FILE, O_WRONLY);//open the FIFO file in writeonly mode
+		printf("Enter the string you want to send till end string is encountered\n");
 		scanf("%s",writebuf);
 		write(fd,writebuf,strlen(writebuf));
 		//printf("Received string: \"%s\" and length is %d\n",writebuf,(int)strlen(writebuf));
