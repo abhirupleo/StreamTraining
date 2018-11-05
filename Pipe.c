@@ -29,7 +29,7 @@ int main(){
 		write(pipefds2[1],pipe2writemessage,sizeof(pipe2writemessage));
 		printf("In Parent: Writing to pipe 2 and the string is %s\n",pipe2writemessage);
 		printf("---------\n");
-		wait(NULL);
+		wait(NULL);//waiting here for the child process to join back
 		close(pipefds1[1]);//reading from pipe2
 		read(pipefds1[0],readmessage1,sizeof(readmessage1));
 		printf("In Parent: Reading from pipe 1 - Message is %s\n",readmessage1);
