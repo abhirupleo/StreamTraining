@@ -1,4 +1,5 @@
-//this program reads from a FIFO file till it encounters "end" string
+//this program writes into the FIFO file till it encounters "end" string
+//TODO: read up about mknod and FIFO file types
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
