@@ -1,0 +1,27 @@
+#include<iostream.h>
+
+class baseClass{
+	public:
+		int age;
+	//this is a method
+	public:
+		void getAge(){
+			age=20;
+			cout<<age<<endl;
+		}
+};
+
+class childClass : public baseClass{
+	//this is a method
+	public:
+		void getAge(){
+			age=10;
+			cout<<"this is the child age"<<age<<endl;
+		}
+};
+
+int main(){
+	childClass c;
+	c.getAge();
+	return 0;
+}
